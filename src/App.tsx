@@ -174,7 +174,7 @@ export default function App() {
     event.preventDefault(); dragCounter.current = 0; setDragging(false);
     const file = event.dataTransfer.files[0]; if (file && !busy) void loadFile(file);
   }}>
-    <header className="site-header"><div className="header-inner"><a href="#" className="brand" aria-label="ImgSplit 首页"><span className="brand-mark"><i /><i /><i /><i /></span><span>ImgSplit<span className="brand-dot">.</span></span></a><span className="header-divider" /><span className="header-subtitle">本地图片切割工具</span><div className="header-right"><span className="local-status"><span className="status-dot" />离线可用</span><button className="help-button" onClick={() => setHelpOpen(true)}><CircleHelp size={16} /><span>使用帮助</span></button></div></div></header>
+    <header className="site-header"><div className="header-inner"><a href="#" className="brand" aria-label="splitWhere 首页"><span className="brand-mark"><i /><i /><i /><i /></span><span>splitWhere<span className="brand-dot">.</span></span></a><span className="header-divider" /><span className="header-subtitle">本地图片切割工具</span><div className="header-right"><span className="local-status"><span className="status-dot" />离线可用</span><button className="help-button" onClick={() => setHelpOpen(true)}><CircleHelp size={16} /><span>使用帮助</span></button></div></div></header>
     <main>
       <div className="page-intro"><div><h1>一张图片，<span>无限可能。</span></h1><p>自由切割，恰到好处。让每一块画面都有自己的精彩。</p></div><div className="privacy-label"><ShieldCheck size={18} /><div><strong>你的图片，只属于你</strong><span>无需上传 · 无水印 · 完全免费</span></div></div></div>
       <div className="workflow"><span className="current"><span>1</span>导入图片</span><ChevronRight size={14} /><span className={image ? 'current' : ''}><span>2</span>调整切割</span><ChevronRight size={14} /><span><span>3</span>下载切图</span></div>
@@ -184,7 +184,7 @@ export default function App() {
       </div><Settings layout={layout} setLayout={updateLayout} output={output} setOutput={setOutput} reset={reset} disabled={busy || loading} /></div>
       <div className="bottom-note"><Scissors size={14} /><span>九宫格分享、无缝轮播、长图分页、素材切片——随你发挥。</span></div>
     </main>
-    <footer><span>ImgSplit<span className="brand-dot">.</span> <span className="footer-tagline">小工具，大创意。</span></span><span><ShieldCheck size={12} />本地处理，安心使用</span><a href="https://www.splitimg.com/zh" target="_blank" rel="noreferrer">参考 SplitImg ↗</a></footer>
+    <footer><span>splitWhere<span className="brand-dot">.</span> <span className="footer-tagline">小工具，大创意。</span></span><span><ShieldCheck size={12} />本地处理，安心使用</span><a href="https://www.splitimg.com/zh" target="_blank" rel="noreferrer">参考 SplitImg ↗</a></footer>
     <input className="visually-hidden" type="file" ref={fileInput} accept="image/jpeg,image/png,image/webp,image/gif,image/bmp,image/avif,.jpg,.jpeg,.png,.webp,.gif,.bmp,.avif" aria-label="选择本地图片" onChange={event => { const file = event.target.files?.[0]; if (file) void loadFile(file); event.target.value = ''; }} />
     {dragging && <div className="drop-overlay"><div><Upload size={44} /><h2>松手，开始切图</h2><p>图片将留在你的设备上</p></div></div>}
     {toast && <div className="toast" role="status"><Check size={17} /><span>{toast}</span><button aria-label="关闭提示" onClick={() => setToast(null)}><X size={14} /></button></div>}

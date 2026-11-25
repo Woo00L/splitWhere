@@ -13,7 +13,7 @@ function openReference(url) {
 
 function createWindow() {
   const window = new BrowserWindow({
-    title: 'ImgSplit · 本地图片切割',
+    title: 'splitWhere · 本地图片切割',
     width: 1280,
     height: 900,
     minWidth: 740,
@@ -45,7 +45,7 @@ function createWindow() {
   window.webContents.on('will-attach-webview', event => event.preventDefault());
   window.webContents.on('did-fail-load', (_event, code, description) => {
     if (code === -3) return;
-    void dialog.showMessageBox(window, { type: 'error', title: 'ImgSplit 无法启动', message: '应用界面加载失败', detail: description });
+    void dialog.showMessageBox(window, { type: 'error', title: 'splitWhere 无法启动', message: '应用界面加载失败', detail: description });
   });
   void window.loadFile(entryFile);
 }
@@ -54,10 +54,10 @@ function createMenu() {
   const template = [];
   if (process.platform === 'darwin') {
     template.push({ label: app.name, submenu: [
-      { role: 'about', label: '关于 ImgSplit' }, { type: 'separator' },
+      { role: 'about', label: '关于 splitWhere' }, { type: 'separator' },
       { role: 'services', label: '服务' }, { type: 'separator' },
-      { role: 'hide', label: '隐藏 ImgSplit' }, { role: 'hideOthers', label: '隐藏其他应用' },
-      { role: 'unhide', label: '显示全部' }, { type: 'separator' }, { role: 'quit', label: '退出 ImgSplit' },
+      { role: 'hide', label: '隐藏 splitWhere' }, { role: 'hideOthers', label: '隐藏其他应用' },
+      { role: 'unhide', label: '显示全部' }, { type: 'separator' }, { role: 'quit', label: '退出 splitWhere' },
     ] });
   }
   template.push(
@@ -75,8 +75,8 @@ function createMenu() {
   Menu.setApplicationMenu(Menu.buildFromTemplate(template));
 }
 
-app.setName('ImgSplit');
-app.setAboutPanelOptions({ applicationName: 'ImgSplit', applicationVersion: app.getVersion(), copyright: '本地图片切割工具 · 图片只在你的设备上处理' });
+app.setName('splitWhere');
+app.setAboutPanelOptions({ applicationName: 'splitWhere', applicationVersion: app.getVersion(), copyright: '本地图片切割工具 · 图片只在你的设备上处理' });
 
 app.whenReady().then(() => {
   const { session } = require('electron');

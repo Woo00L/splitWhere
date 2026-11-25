@@ -1,5 +1,5 @@
 appId: com.woo00l.imgsplit
-productName: ImgSplit
+productName: splitWhere
 copyright: Copyright © 2026 Woo00L
 directories:
   output: release
@@ -23,8 +23,8 @@ mac:
     - target: dmg
       arch: [universal]
 dmg:
-  artifactName: ImgSplit-${version}-macOS-Universal.${ext}
-  title: ImgSplit
+  artifactName: splitWhere-${version}-macOS-Universal.${ext}
+  title: splitWhere
   contents:
     - x: 140
       y: 180
@@ -42,14 +42,14 @@ win:
     - target: portable
       arch: [x64]
 nsis:
-  artifactName: ImgSplit-${version}-Windows-Setup.${ext}
+  artifactName: splitWhere-${version}-Windows-Setup.${ext}
   oneClick: false
   perMachine: false
   allowToChangeInstallationDirectory: true
   createDesktopShortcut: true
   createStartMenuShortcut: true
-  shortcutName: ImgSplit
+  shortcutName: splitWhere
   installerLanguages: [zh_CN, en_US]
   language: '2052'
 portable:
-  artifactName: ImgSplit-${version}-Windows-Portable.${ext}
+  artifactName: splitWhere-${version}-Windows-Portable.${ext}

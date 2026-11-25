@@ -1,4 +1,4 @@
-# SplitWhere 本地图片切割工具
+# splitWhere 本地图片切割工具
 
 参照 [SplitImg](https://www.splitimg.com/zh) 制作的中文本地切图工作台。使用 React、TypeScript、Vite 和 Canvas；没有后端服务，图片不会上传。
 
@@ -6,15 +6,15 @@
 
 桌面版无需安装 Node.js，也不需要运行终端命令：
 
-[下载桌面版 v1.0.0](https://github.com/Woo00L/SplitWhere/releases/tag/v1.0.0)：打开页面后，在附件中选择对应系统的安装包。
+[下载桌面版 v1.0.1](https://github.com/Woo00L/splitWhere/releases/tag/v1.0.1)：打开页面后，在附件中选择对应系统的安装包。
 
-- [macOS 通用 DMG](https://github.com/Woo00L/SplitWhere/releases/download/v1.0.0/ImgSplit-1.0.0-macOS-Universal.dmg)
-- [Windows 64 位免安装 EXE](https://github.com/Woo00L/SplitWhere/releases/download/v1.0.0/ImgSplit-1.0.0-Windows-Portable.exe)
-- [Windows 64 位安装 EXE](https://github.com/Woo00L/SplitWhere/releases/download/v1.0.0/ImgSplit-1.0.0-Windows-Setup.exe)
+- [macOS 通用 DMG](https://github.com/Woo00L/splitWhere/releases/download/v1.0.1/splitWhere-1.0.1-macOS-Universal.dmg)
+- [Windows 64 位免安装 EXE](https://github.com/Woo00L/splitWhere/releases/download/v1.0.1/splitWhere-1.0.1-Windows-Portable.exe)
+- [Windows 64 位安装 EXE](https://github.com/Woo00L/splitWhere/releases/download/v1.0.1/splitWhere-1.0.1-Windows-Setup.exe)
 
-- macOS：打开 `release/ImgSplit-1.0.0-macOS-Universal.dmg`，把 ImgSplit 拖入「应用程序」后打开。这个包同时包含 Apple 芯片和 Intel 版本。
-- Windows 免安装版：双击 `release/ImgSplit-1.0.0-Windows-Portable.exe`，等待解压完成即可使用。
-- Windows 安装版：打开 `release/ImgSplit-1.0.0-Windows-Setup.exe`，安装后从桌面或开始菜单打开。
+- macOS：打开 `release/splitWhere-1.0.1-macOS-Universal.dmg`，把 splitWhere 拖入「应用程序」后打开。这个包同时包含 Apple 芯片和 Intel 版本。
+- Windows 免安装版：双击 `release/splitWhere-1.0.1-Windows-Portable.exe`，等待解压完成即可使用。
+- Windows 安装版：打开 `release/splitWhere-1.0.1-Windows-Setup.exe`，安装后从桌面或开始菜单打开。
 
 桌面版包含全部运行资源，切图时不需要联网。保存单张图片或 ZIP 时会弹出系统保存窗口。Windows 包为 64 位版本。当前包没有发布者证书签名，macOS 仅采用本地临时签名、没有 Apple 公证，系统首次打开时可能出现安全提示。
 
