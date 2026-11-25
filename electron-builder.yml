@@ -1,0 +1,55 @@
+appId: com.woo00l.imgsplit
+productName: ImgSplit
+copyright: Copyright © 2026 Woo00L
+directories:
+  output: release
+  buildResources: build
+files:
+  - dist/**
+  - desktop/**
+  - build/icon.png
+  - package.json
+  - '!**/*.test.*'
+asar: true
+npmRebuild: false
+publish: null
+mac:
+  category: public.app-category.graphics-design
+  icon: build/icon.icns
+  identity: '-'
+  hardenedRuntime: true
+  notarize: false
+  target:
+    - target: dmg
+      arch: [universal]
+dmg:
+  artifactName: ImgSplit-${version}-macOS-Universal.${ext}
+  title: ImgSplit
+  contents:
+    - x: 140
+      y: 180
+      type: file
+    - x: 410
+      y: 180
+      type: link
+      path: /Applications
+win:
+  icon: build/icon.ico
+  signExecutable: false
+  target:
+    - target: nsis
+      arch: [x64]
+    - target: portable
+      arch: [x64]
+nsis:
+  artifactName: ImgSplit-${version}-Windows-Setup.${ext}
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: ImgSplit
+  installerLanguages: [zh_CN, en_US]
+  language: '2052'
+portable:
+  artifactName: ImgSplit-${version}-Windows-Portable.${ext}

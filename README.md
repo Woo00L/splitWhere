@@ -4,6 +4,20 @@
 
 ## 直接使用
 
+桌面版无需安装 Node.js，也不需要运行终端命令：
+
+[下载桌面版 v1.0.0](https://github.com/Woo00L/ImgSplit/releases/tag/v1.0.0)：打开页面后，在附件中选择对应系统的安装包。
+
+- [macOS 通用 DMG](https://github.com/Woo00L/ImgSplit/releases/download/v1.0.0/ImgSplit-1.0.0-macOS-Universal.dmg)
+- [Windows 64 位免安装 EXE](https://github.com/Woo00L/ImgSplit/releases/download/v1.0.0/ImgSplit-1.0.0-Windows-Portable.exe)
+- [Windows 64 位安装 EXE](https://github.com/Woo00L/ImgSplit/releases/download/v1.0.0/ImgSplit-1.0.0-Windows-Setup.exe)
+
+- macOS：打开 `release/ImgSplit-1.0.0-macOS-Universal.dmg`，把 ImgSplit 拖入「应用程序」后打开。这个包同时包含 Apple 芯片和 Intel 版本。
+- Windows 免安装版：双击 `release/ImgSplit-1.0.0-Windows-Portable.exe`，等待解压完成即可使用。
+- Windows 安装版：打开 `release/ImgSplit-1.0.0-Windows-Setup.exe`，安装后从桌面或开始菜单打开。
+
+桌面版包含全部运行资源，切图时不需要联网。保存单张图片或 ZIP 时会弹出系统保存窗口。Windows 包为 64 位版本。当前包没有发布者证书签名，macOS 仅采用本地临时签名、没有 Apple 公证，系统首次打开时可能出现安全提示。
+
 构建结果为 `dist/index.html`。使用 Chrome、Edge 或 Safari 打开这个文件即可，代码、样式和示例图都在同一个文件内，不需要联网或安装 Node.js。可以将它复制到其他目录或电脑。
 
 Codex 内置浏览器不允许打开 `file://` 地址，且下载可能受限。在 Codex 中请使用下方的本地服务；保存切图建议使用普通浏览器。
@@ -24,6 +38,15 @@ npm test
 npm run build
 npm run preview
 ```
+
+重新打包桌面版：
+
+```sh
+npm run pack:mac
+npm run pack:win
+```
+
+安装包输出到 `release/`，不加入 Git。`npm run desktop` 用于开发时启动桌面窗口。图标由 `npm run icons` 按现有品牌图形生成。
 
 `npm test` 包括切割坐标、像素覆盖、编号、裁剪、边框、透明度、PNG/JPG/WebP 编码及 ZIP 解包测试。编码测试使用原生 Canvas 实现；界面另在内置浏览器完成桌面和手机宽度验证。
 
